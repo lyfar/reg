@@ -1,5 +1,5 @@
 export default {
-      logo: <span>Login Feature Technical Specification for ZFX PWA - made with Lumentis</span>,
+      logo: <span>Login Feature Technical Specification for ZFX PWA</span>,
       editLink: {
         component: null,
       },
@@ -13,8 +13,7 @@ export default {
         text: (
           <>
             Made with 🫶 by&nbsp;
-            <a href="https://twitter.com/hrishioa" target="_blank">
-              Hrishi - say hi!
+            Egor
             </a>
           </>
         ),
