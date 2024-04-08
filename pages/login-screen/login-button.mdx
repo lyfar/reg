@@ -1,0 +1,65 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Login Button
+
+When the user clicks the login button, the app will attempt to authenticate the user's credentials against the backend API. The login button should be prominently displayed below the login form and should be enabled only when the form is properly filled out and validated.
+
+## Button State
+
+The login button should have the following states:
+
+- **Enabled**: When the login form is properly filled out and validated, the login button should be enabled and clickable.
+- **Disabled**: When the login form is incomplete or contains invalid data, the login button should be disabled and not clickable.
+- **Loading**: When the user clicks the login button and the authentication request is in progress, the button should display a loading state (e.g., a spinner or progress indicator) to provide visual feedback to the user.
+
+## Authentication Flow
+
+When the user clicks the login button, the following steps should be performed:
+
+<Steps>
+### Step 1
+
+Collect the user's login credentials (phone number or email and password) from the login form.
+
+### Step 2
+
+Send an authentication request to the backend API with the user's credentials.
+
+### Step 3
+
+Handle the API response:
+- If the authentication is successful, proceed to [Step 4](#step-4).
+- If the authentication fails, display an appropriate error message (e.g., "Invalid credentials") and reset the login form.
+
+### Step 4
+
+Store the user's authentication token securely in the app's local storage or session storage.
+
+### Step 5
+
+Redirect the user to the app's main dashboard or the intended destination after successful login.
+</Steps>
+
+<Callout type="info">
+Make sure to follow security best practices when storing and transmitting user credentials and authentication tokens.
+</Callout>
+
+## Error Handling
+
+If the authentication process encounters an error, the app should display an appropriate error message to the user. Some common error scenarios include:
+
+- Invalid credentials (phone number/email or password)
+- Account is inactive or suspended
+- Network connectivity issues
+
+The error messages should be clear, concise, and provide guidance on how the user can resolve the issue (e.g., "Please check your credentials and try again" or "Contact support for assistance").
+
+## Integration with Other Features
+
+The login button functionality should be seamlessly integrated with other features of the ZFX PWA, such as:
+
+- [Language Switcher](/login-screen/language-switcher): The login button text should be translated based on the selected language.
+- [Forgot Password Link](/login-screen/forgot-password-link): If the user clicks the forgot password link, the login button should be disabled until the user returns to the login screen.
+- [Registration Link](/login-screen/registration-link): If the user clicks the registration link, the login button should be disabled until the user returns to the login screen.
+
+By implementing a robust and user-friendly login button functionality, the ZFX PWA can provide a smooth and secure authentication experience for its users.

@@ -1,0 +1,31 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Domain Blocking Handling
+
+In some cases, the domain hosting the ZFX PWA may be blocked by certain network providers or in specific regions. To ensure a seamless user experience and maintain accessibility for all users, the app will implement a domain blocking handling mechanism.
+
+The domain blocking handling feature will utilize the PWA's service worker to cache a special page containing a link to a new, unblocked domain. This cached page will be displayed to users when the app detects that the current domain is inaccessible.
+
+## Caching Mechanism
+
+The caching mechanism will be implemented using the PWA's service worker. The app will cache a page containing a link to the new, unblocked domain, ensuring that users can access the app even if the current domain is blocked.
+
+[Read more about the caching mechanism](/domain-blocking-handling/caching-mechanism)
+
+## Error Handling
+
+When the app detects that the current domain is blocked, it will display the cached page with the link to the new domain. This error handling approach ensures that users are informed about the domain change and can easily access the app through the new domain.
+
+[Learn more about error handling](/domain-blocking-handling/error-handling)
+
+## Redirecting to New Domain
+
+When users click on the link to the new domain provided on the cached page, the app will open the link in the user's default browser. This redirection process ensures a smooth transition to the new domain, allowing users to continue using the ZFX PWA without interruption.
+
+[Discover how the app redirects users to the new domain](/domain-blocking-handling/redirecting-to-new-domain)
+
+<Callout type="info">
+The domain blocking handling feature is designed to minimize disruptions to the user experience and maintain accessibility for all users, even in regions where the primary domain may be blocked.
+</Callout>
+
+By implementing this robust domain blocking handling mechanism, the ZFX PWA ensures that users can always access the app and continue their trading activities, regardless of any domain blocking issues that may arise.

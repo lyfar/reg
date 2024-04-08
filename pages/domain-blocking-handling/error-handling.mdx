@@ -1,0 +1,33 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Error Handling
+
+When the ZFX PWA encounters a domain blocking error, it should display the cached page with a link to the new domain. This ensures that users can continue accessing the app even if the current domain is blocked.
+
+<Steps>
+
+### Step 1: Detect Domain Blocking Error
+
+The PWA should be able to detect when a domain blocking error occurs. This can be achieved by monitoring the network requests and responses, looking for specific error codes or messages that indicate a blocked domain.
+
+### Step 2: Retrieve Cached Page
+
+Upon detecting a domain blocking error, the PWA should retrieve the cached page that contains the link to the new domain. This cached page should be stored in the service worker's cache and should be accessible even when the current domain is blocked.
+
+### Step 3: Display Cached Page
+
+Once the cached page is retrieved, the PWA should display it to the user. This page should inform the user that the current domain is unavailable and provide them with a link to access the app on the new domain.
+
+</Steps>
+
+The cached page should have a clear and concise message, such as:
+
+> We apologize for the inconvenience, but the current domain is temporarily unavailable. Please click the link below to continue using the ZFX app on our new domain.
+
+<Callout type="info">
+The cached page should be designed to be user-friendly and visually appealing, following the ZFX brand guidelines. It should also be optimized for fast loading and minimal resource usage.
+</Callout>
+
+By implementing this error handling mechanism, the ZFX PWA can ensure a seamless user experience even in the event of domain blocking. Users will be able to quickly and easily access the app on the new domain, minimizing disruption to their trading activities.
+
+For more information on redirecting users to the new domain, see the [Redirecting to New Domain](/domain-blocking-handling/redirecting-to-new-domain) section.

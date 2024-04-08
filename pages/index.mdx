@@ -1,0 +1,75 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Introduction
+
+The Login Feature Technical Specification for ZFX PWA is a comprehensive document designed to provide a clear and detailed overview of the login functionality and user interface for the ZFX trading Progressive Web App (PWA). This document serves as a guide for the front-end development and quality assurance (QA) teams, ensuring that the implementation aligns with the specified requirements and delivers a seamless user experience.
+
+## Purpose
+
+The primary purpose of this documentation is to:
+
+- Define the login screen layout and components
+- Specify the login process flow and user interactions
+- Outline the language localization requirements
+- Address domain blocking handling and error scenarios
+- Provide a reference for the development and QA teams
+
+By adhering to the specifications outlined in this document, the ZFX trading PWA will offer users a secure, intuitive, and localized login experience, enabling them to access their trading accounts seamlessly.
+
+## Scope
+
+This document focuses on the login feature of the ZFX trading PWA, including:
+
+- [Login Screen](/login-screen)
+  - [Install App Prompt](/login-screen/install-app-prompt)
+  - [Language Switcher](/login-screen/language-switcher)
+  - [Login Form](/login-screen/login-form)
+  - [Forgot Password Link](/login-screen/forgot-password-link)
+  - [Login Button](/login-screen/login-button)
+  - [Registration Link](/login-screen/registration-link)
+- [Domain Blocking Handling](/domain-blocking-handling)
+  - [Caching Mechanism](/domain-blocking-handling/caching-mechanism)
+  - [Error Handling](/domain-blocking-handling/error-handling)
+  - [Redirecting to New Domain](/domain-blocking-handling/redirecting-to-new-domain)
+
+## Target Audience
+
+The intended audience for this documentation includes:
+
+- Front-end developers responsible for implementing the login feature
+- Quality assurance (QA) team members tasked with testing and validating the login functionality
+- Product managers and stakeholders overseeing the development of the ZFX trading PWA
+
+<Callout type="info">
+  This document assumes familiarity with web development technologies, Progressive Web Apps (PWAs), and basic user authentication concepts.
+</Callout>
+
+## Getting Started
+
+To begin implementing the login feature for the ZFX trading PWA, follow these steps:
+
+<Steps>
+
+### Review the Login Screen section
+
+Familiarize yourself with the [Login Screen](/login-screen) layout, components, and user interactions specified in the documentation.
+
+### Implement the Login Form
+
+Develop the [Login Form](/login-screen/login-form) component, ensuring proper input validation, error handling, and support for both phone number and email login options.
+
+### Integrate Language Localization
+
+Implement the [Language Switcher](/login-screen/language-switcher) and ensure that the login screen is properly localized based on user preferences and device settings.
+
+### Handle Domain Blocking
+
+Implement the [Domain Blocking Handling](/domain-blocking-handling) mechanism to cache a page with a new domain link in case the current domain is blocked.
+
+### Test and Validate
+
+Work with the QA team to thoroughly test the login functionality, ensuring that it meets the specified requirements and provides a smooth user experience.
+
+</Steps>
+
+By following this documentation and implementing the login feature as specified, the ZFX trading PWA will offer users a secure and intuitive login process, enhancing their overall trading experience.

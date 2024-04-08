@@ -1,0 +1,68 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Login Form
+
+The login form is a crucial component of the ZFX trading PWA, allowing users to access their accounts using either their phone number or email address. The form consists of two tabs: one for phone number login and another for email login.
+
+## Phone Number Tab
+
+By default, the phone tab is selected when the user lands on the login screen. The phone input field should have the following features:
+
+- Country code selector with a flag icon
+- Users can change the country code by clicking on the flag icon and selecting from a list of countries
+- Users cannot modify the country code directly
+- Input mask to ensure proper phone number formatting
+- Only numeric input is allowed
+
+<Callout type="info">
+Ensure that the phone number input follows the E.164 international standard format for consistency and easier backend processing.
+</Callout>
+
+## Email Tab
+
+Users can switch to the email tab to log in using their registered email address. The email input field should:
+
+- Validate the email format using a regular expression or built-in HTML5 email validation
+- Display an error message if the entered email is invalid
+
+## Password Input
+
+Below the phone number or email input, there is a password field. The password input should have the following features:
+
+- Password masking by default
+- Toggle to show/hide the password in plain text
+- No specific password requirements (e.g., minimum length or character types) as the accounts are pre-existing
+
+## Form Validation and Error Handling
+
+Proper form validation and error handling are essential for a smooth user experience. Implement the following:
+
+- Real-time validation for phone number and email formats
+- Display appropriate error messages for invalid inputs, such as:
+  - "Invalid phone number"
+  - "Invalid email address"
+  - "Incorrect password"
+  - "Account doesn't exist"
+
+<Steps>
+### Step 1
+
+Validate the phone number or email format when the user finishes typing or moves to the next input field.
+
+### Step 2
+
+If the input is invalid, display the corresponding error message below the input field.
+
+### Step 3
+
+If the input is valid, remove any previously displayed error messages.
+
+### Step 4
+
+When the user clicks the login button, validate all fields and display error messages if necessary.
+
+</Steps>
+
+By implementing these validation and error handling steps, users will receive immediate feedback on their input and can correct any issues before attempting to log in.
+
+For more information on the login button and its functionality, refer to the [Login Button](/login-screen/login-button) section.

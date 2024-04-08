@@ -1,0 +1,52 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Registration Link
+
+The registration link on the login screen is designed to redirect users to the main ZFX trading platform for creating a new account. As the PWA currently does not support the registration process within the app, this link serves as a convenient way for new users to navigate to the appropriate registration page.
+
+## Implementation
+
+The registration link should be placed below the login button on the login screen. It should be clearly labeled as "Register" or "Create an Account" to indicate its purpose.
+
+Here's an example of how the registration link can be implemented in HTML:
+
+```html
+<a href="https://my.zfx.com/register" class="register-link">Create an Account</a>
+```
+
+The `href` attribute should contain the URL of the registration page on the main ZFX trading platform. The exact URL may vary depending on the specific domain or region.
+
+## User Flow
+
+When a user clicks on the registration link, the following steps should occur:
+
+<Steps>
+### Step 1
+
+The PWA should open the registration URL in a new tab or window of the user's default browser.
+
+### Step 2
+
+The user should be directed to the registration page on the main ZFX trading platform, where they can complete the account creation process.
+</Steps>
+
+By opening the registration page in a new tab or window, the user can easily navigate back to the PWA after completing the registration process.
+
+## Future Considerations
+
+In future releases of the ZFX trading PWA, it may be beneficial to incorporate the registration process directly within the app. This would provide a more seamless user experience and eliminate the need for redirecting users to the main platform for account creation.
+
+To implement in-app registration, the following steps would be required:
+
+1. Design and develop a user-friendly registration form within the PWA.
+2. Implement client-side validation to ensure that user input meets the required criteria (e.g., password strength, email format).
+3. Integrate with the backend API to securely transmit user registration data and create new accounts.
+4. Handle success and error scenarios, providing appropriate feedback to the user.
+
+By incorporating the registration process within the PWA, users can enjoy a more streamlined and convenient experience when starting their trading journey with ZFX.
+
+For more information on the login screen and its components, refer to the following sections:
+
+- [Login Form](/login-screen/login-form)
+- [Forgot Password Link](/login-screen/forgot-password-link)
+- [Login Button](/login-screen/login-button)
